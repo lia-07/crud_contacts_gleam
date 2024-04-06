@@ -1,25 +1,3 @@
-# crud_contacts_gleam
+# CRUD Contacts Gleam
 
-[![Package Version](https://img.shields.io/hexpm/v/crud_contacts_gleam)](https://hex.pm/packages/crud_contacts_gleam)
-[![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/crud_contacts_gleam/)
-
-```sh
-gleam add crud_contacts_gleam
-```
-```gleam
-import crud_contacts_gleam
-
-pub fn main() {
-  // TODO: An example of the project in use
-}
-```
-
-Further documentation can be found at <https://hexdocs.pm/crud_contacts_gleam>.
-
-## Development
-
-```sh
-gleam run   # Run the project
-gleam test  # Run the tests
-gleam shell # Run an Erlang shell
-```
+This is an example application written in Gleam using the Wisp framework that implements CRUD (Create, Read, Update, Delete) functionality. It is not intended for general use.
