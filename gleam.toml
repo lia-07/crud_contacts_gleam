@@ -16,6 +16,7 @@ version = "1.0.0"
 gleam_stdlib = "~> 0.34 or ~> 1.0"
 mist = "~> 1.0"
 wisp = "~> 0.14"
+sqlight = "~> 0.9"
 
 [dev-dependencies]
 gleeunit = "~> 1.0"
