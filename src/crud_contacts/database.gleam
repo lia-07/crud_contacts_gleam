@@ -14,7 +14,6 @@ pub fn migrate_schema(db: sqlight.Connection) -> Result(Nil, AppError) {
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL CHECK(length(name) > 0),
     favourite_colour TEXT CHECK(length(favourite_colour) > 0),
-    birthday DATE CHECK(birthday IS NULL OR DATE(birthday) IS NOT NULL),
     phone_number TEXT CHECK(length(phone_number) > 0),
     email TEXT CHECK(length(email) > 0 AND email LIKE '%@%.%'),
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
