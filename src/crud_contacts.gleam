@@ -10,12 +10,12 @@ import crud_contacts/errors
 import crud_contacts/router
 import crud_contacts/web
 
-pub const db_name = "data/db.sqlite3"
+pub const db_name = "db.sqlite3"
 
 pub fn main() {
   wisp.configure_logger()
   let secret_key_base = wisp.random_string(64)
-
+  io.debug("e")
   let assert Ok(_) = database.with_connection(db_name, database.migrate_schema)
 
   use db <- database.with_connection(db_name)
