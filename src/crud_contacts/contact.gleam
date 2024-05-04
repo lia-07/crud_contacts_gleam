@@ -59,11 +59,6 @@ pub fn new(formdata: FormData, ctx: Context) -> Result(Int, AppError) {
     VALUES (?1, ?2, ?3, ?4)
     RETURNING id"
 
-  // let name = "lia"
-  // let favourite_colour = "Blue"
-  // let phone = "0272518505"
-  // let email = "lia@example.com"
-
   use rows <- result.then(
     sqlight.query(
       stmt,
