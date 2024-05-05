@@ -25,6 +25,10 @@ pub fn base_page(title title: String, content content: String) {
       background-color: #eee;
       padding: 2rem 3rem;
     }
+    th {
+      text-align: left;
+      padding-right: 10px;
+    }
     </style>
 </head>
 <body><div class=\"container\">" <> content <> "</div></body>
@@ -55,4 +59,42 @@ pub fn home_page(contacts: List(Contact)) {
     })
     |> string_builder.from_strings()
     |> string_builder.to_string() <> "</ul>")
+}
+
+pub fn contact_page(contact: Contact) {
+  base_page(
+    title: contact.name <> " | Contact", content: 
+    "<h1>" <> contact.name <> " - Information</h1>
+    <table border="1">
+      <tr>
+          <th>Title</th>
+          <th>Data</th>
+      </tr>
+      <tr>
+          <td>Name</td>
+          <td>"<> contact.name <>"</td>
+      </tr>
+      <tr>
+          <td>Favourite Colour</td>
+          <td>"<> contact.favourite_colour <>"</td>
+      </tr>
+      <tr>
+          <td>Phone</td>
+          <td>"<> contact.phone <>"</td>
+      </tr>
+      <tr>
+          <td>Email</td>
+          <td>"<> contact.email <>"</td>
+      </tr>
+      <tr>
+          <td>Created</td>
+          <td>"<> contact.created <>"</td>
+      </tr>
+      <tr>
+          <td>Updated</td>
+          <td>"<> contact.update <>"</td>
+      </tr>
+  </table>
+  ",
+  )
 }
