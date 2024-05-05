@@ -15,7 +15,7 @@ pub fn migrate_schema(db: sqlight.Connection) -> Result(Nil, AppError) {
     name TEXT NOT NULL CHECK(length(name) > 0),
     favourite_colour TEXT,
     phone TEXT,
-    email TEXT CHECK(email LIKE '%@%.%'),
+    email TEXT,
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );",
