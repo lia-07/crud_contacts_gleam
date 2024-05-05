@@ -13,9 +13,9 @@ pub fn migrate_schema(db: sqlight.Connection) -> Result(Nil, AppError) {
     "CREATE TABLE IF NOT EXISTS contacts (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL CHECK(length(name) > 0),
-    favourite_colour TEXT CHECK(length(favourite_colour) > 0),
-    phone TEXT CHECK(length(phone) > 0),
-    email TEXT CHECK(length(email) > 0 AND email LIKE '%@%.%'),
+    favourite_colour TEXT,
+    phone TEXT,
+    email TEXT CHECK(email LIKE '%@%.%'),
     created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );",
