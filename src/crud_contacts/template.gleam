@@ -1,4 +1,5 @@
 import gleam/list
+import gleam/int
 import gleam/string_builder
 import crud_contacts/contact.{type Contact}
 
@@ -63,36 +64,36 @@ pub fn home_page(contacts: List(Contact)) {
 
 pub fn contact_page(contact: Contact) {
   base_page(
-    title: contact.name <> " | Contact", content: 
-    "<h1>" <> contact.name <> " - Information</h1>
-    <table border="1">
+    title: contact.name <> " | Contact",
+    content: "<h1>" <> contact.name <> " - Information</h1>
+    <table border=\"1\">
       <tr>
-          <th>Title</th>
-          <th>Data</th>
+          <td>ID</td>
+          <td>" <> int.to_string(contact.id) <> "</td>
       </tr>
       <tr>
           <td>Name</td>
-          <td>"<> contact.name <>"</td>
+          <td>" <> contact.name <> "</td>
       </tr>
       <tr>
           <td>Favourite Colour</td>
-          <td>"<> contact.favourite_colour <>"</td>
+          <td>" <> contact.favourite_colour <> "</td>
       </tr>
       <tr>
           <td>Phone</td>
-          <td>"<> contact.phone <>"</td>
+          <td>" <> contact.phone <> "</td>
       </tr>
       <tr>
           <td>Email</td>
-          <td>"<> contact.email <>"</td>
+          <td>" <> contact.email <> "</td>
       </tr>
       <tr>
           <td>Created</td>
-          <td>"<> contact.created <>"</td>
+          <td>" <> contact.created <> "</td>
       </tr>
       <tr>
           <td>Updated</td>
-          <td>"<> contact.update <>"</td>
+          <td>" <> contact.update <> "</td>
       </tr>
   </table>
   ",
